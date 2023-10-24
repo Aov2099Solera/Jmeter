@@ -16,11 +16,11 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador Bucle" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">400</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">300</stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">7200</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -33,32 +33,32 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:sei=&quot;http://sei.rest.services.client.maya.omnitracs.mx/&quot;&gt;&#xd;
-&lt;soapenv:Header/&gt;&#xd;
-&lt;soapenv:Body&gt;&#xd;
-&lt;sei:getPositions&gt;&#xd;
-&lt;!--Optional:--&gt;&#xd;
-&lt;request&gt;&#xd;
-&lt;!--Optional:--&gt;&#xd;
-&lt;clientCode&gt;mx9665a&lt;/clientCode&gt;&#xd;
-&lt;!--Optional:--&gt;&#xd;
-&lt;endDate&gt;2023-04-21 13:20:00&lt;/endDate&gt;&#xd;
-&lt;!--Optional:--&gt;&#xd;
-&lt;password&gt;0r10n2017_&lt;/password&gt;&#xd;
-&lt;!--Optional:--&gt;&#xd;
-&lt;startDate&gt;2023-04-21 13:10:00&lt;/startDate&gt;&#xd;
-&lt;!--Optional:--&gt;&#xd;
-&lt;userName&gt;13361mx9665a&lt;/userName&gt;&#xd;
-&lt;/request&gt;&#xd;
-&lt;/sei:getPositions&gt;&#xd;
-&lt;/soapenv:Body&gt;&#xd;
+    &lt;soapenv:Header/&gt;&#xd;
+        &lt;soapenv:Body&gt;&#xd;
+            &lt;sei:getPositions&gt;&#xd;
+            &lt;!--Optional:--&gt;&#xd;
+            &lt;request&gt;&#xd;
+                &lt;!--Optional:--&gt;&#xd;
+                &lt;clientCode&gt;PREP001&lt;/clientCode&gt;&#xd;
+                &lt;!--Optional:--&gt;&#xd;
+                &lt;endDate&gt;2023-05-02 18:10:00&lt;/endDate&gt;&#xd;
+                &lt;!--Optional:--&gt;&#xd;
+                &lt;password&gt;0r10n2017_&lt;/password&gt;&#xd;
+                &lt;!--Optional:--&gt;&#xd;
+                &lt;startDate&gt;2023-05-02 18:00:00&lt;/startDate&gt;&#xd;
+                &lt;!--Optional:--&gt;&#xd;
+                &lt;userName&gt;6457PREP001&lt;/userName&gt;&#xd;
+            &lt;/request&gt;&#xd;
+        &lt;/sei:getPositions&gt;&#xd;
+    &lt;/soapenv:Body&gt;&#xd;
 &lt;/soapenv:Envelope&gt;</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">aws-cc.omnitracs.online</stringProp>
+          <stringProp name="HTTPSampler.domain">http://localhost:8080</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">/customer-services/VehicleActivityService</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -80,7 +80,7 @@
           </collectionProp>
         </HeaderManager>
         <hashTree/>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="false">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
